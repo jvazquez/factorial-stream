@@ -8,12 +8,15 @@ const server = require("http").createServer();
 
 server.on("request", (req, res) => {
     const queryObject = url.parse(req.url,true).query;
-    const number = parseInt(queryObject.number);
+    let number = parseInt(queryObject.number);
     const factorial = new Factorial();
-    try{
-        res.setHeader('Content-Type', 'application/json');
+    try {
+        if(isNaN(number) || number <= 0){
+            number = 1;
+        }
+        res.setHeader('Content-Type', 'text/html');
         for(const i of factorial.calculate_generator(number)){
-            res.write(`${i.toString()}\n`);
+            res.write(`${i.toLocaleString('fullwide', {useGrouping:false}).toString()}\n`);
         }
         res.statusCode = 200;
         res.end();
