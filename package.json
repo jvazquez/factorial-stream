@@ -1,0 +1,48 @@
+{
+  "name": "nodejsplayground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "jest -i",
+    "test:watch": "jest -i --watchAll",
+    "coverage": "jest -i --coverage",
+    "coverage:coveralls": "jest -i --coverage --coverageReporters=text-lcov | coveralls",
+    "dev": "NODE_ENV=development nodemon app/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "express-paginate": "^1.0.0",
+    "http-errors": "~1.6.3",
+    "http-status": "^1.4.2",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.7",
+    "morgan": "~1.9.1",
+    "pm2": "^4.2.3",
+    "pug": "2.0.0-beta11",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "bootstrap": "^4.4.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-security": "^1.4.0",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "npx": "^10.2.2",
+    "prettier": "^1.13.0"
+  }
+}
